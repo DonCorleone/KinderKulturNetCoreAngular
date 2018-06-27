@@ -10,10 +10,7 @@
       "type": "chrome",
       "request": "launch",
       "url": "http://localhost:5000",
-      "webRoot": "${workspaceRoot}/wwwroot",
-      "sourceMapPathOverrides": {
-        "webpack:///./*": "${workspaceRoot}\\*"
-      }
+      "webRoot": "${workspaceRoot}/wwwroot"
     },
     {
       "name": "[Development] Launch Server (no browser)",

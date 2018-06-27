@@ -15,12 +15,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
-import { HomeComponent } from './containers/home/home.component';
-import { UsersComponent } from './containers/users/users.component';
+import { HomeComponent } from './components/home/home.component';
+import { UsersComponent } from './components/users/users.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import { CounterComponent } from './containers/counter/counter.component';
-import { NotFoundComponent } from './containers/not-found/not-found.component';
-import { NgxBootstrapComponent } from './containers/ngx-bootstrap-demo/ngx-bootstrap.component';
+import { CounterComponent } from './components/counter/counter.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { NgxBootstrapComponent } from './components/ngx-bootstrap-demo/ngx-bootstrap.component';
 
 import { LinkService } from './shared/link.service';
 import { UserService } from './shared/user.service';
@@ -125,7 +125,7 @@ export function createTranslateLoader(http: HttpClient, baseHref) {
                 }
             },
 
-            { path: 'lazy', loadChildren: './containers/lazy/lazy.module#LazyModule'},
+            { path: 'lazy', loadChildren: './components/lazy/lazy.module#LazyModule'},
 
             {
                 path: '**', component: NotFoundComponent,
