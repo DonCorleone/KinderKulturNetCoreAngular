@@ -4,6 +4,8 @@ using AspCoreServer.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -41,9 +43,10 @@ namespace AspCoreServer {
     public void ConfigureServices (IServiceCollection services) {
       // Add framework services.
       services.AddMvc ();
+     // services.AddApiVersioning(o => o.DefaultApiVersion = new ApiVersion(1, 0));
       services.AddNodeServices ();
       services.AddHttpContextAccessor ();
-      services.AddProgressiveWebApp (new PwaOptions { Strategy = ServiceWorkerStrategy.CacheFirst, RegisterServiceWorker = true, RegisterWebmanifest = true }, "manifest.json");
+      services.AddProgressiveWebApp (new PwaOptions { Strategy = ServiceWorkerStrategy.NetworkFirst, RegisterServiceWorker = true, RegisterWebmanifest = true }, "manifest.json");
 
       var connectionStringBuilder = new Microsoft.Data.Sqlite.SqliteConnectionStringBuilder { DataSource = "spa.db" };
       var connectionString = connectionStringBuilder.ToString ();

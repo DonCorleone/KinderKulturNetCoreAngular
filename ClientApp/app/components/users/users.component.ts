@@ -65,7 +65,7 @@ export class UsersComponent implements OnInit {
   }
 
   onUserUpdate(user: IUser) {
-    this.users[this.users.findIndex((u => u.id == user.id))] = user;
+    this.users[this.users.findIndex((u => u.id === user.id))] = user;
   }
 
   addUser(newUserName) {
@@ -80,7 +80,7 @@ export class UsersComponent implements OnInit {
 
   clearUser() {
     if (this.selectedUser) {
-      this.selectedUser = null;
+      this.selectedUser = undefined;
     }
   }
 }
