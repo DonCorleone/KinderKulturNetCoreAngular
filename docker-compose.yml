@@ -1,8 +1,8 @@
 version: '3.4'
 
 services:
-  asp2017:
-    image: ${DOCKER_REGISTRY}asp2017
+  KinderKulturServer:
+    image: ${DOCKER_REGISTRY}KinderKulturServer
     build:
       context: .
       dockerfile: Dockerfile

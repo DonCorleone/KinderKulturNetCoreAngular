@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace AspCoreServer.Models
+namespace AspCoreServer.Server.Models
 {
     public class User
     {

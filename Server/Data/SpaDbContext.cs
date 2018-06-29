@@ -1,7 +1,7 @@
-﻿using AspCoreServer.Models;
+﻿using AspCoreServer.Server.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace AspCoreServer.Data
+namespace AspCoreServer.Server.Data
 {
     public class SpaDbContext : DbContext
     {

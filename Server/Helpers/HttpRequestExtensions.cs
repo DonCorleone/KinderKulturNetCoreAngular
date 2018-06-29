@@ -1,4 +1,4 @@
-using Asp2017.Server.Models;
+using AspCoreServer.Server.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Asp2017.Server.Helpers
+namespace AspCoreServer.Server.Helpers
 {
     public static class HttpRequestExtensions
     {
@@ -56,7 +56,7 @@ namespace Asp2017.Server.Helpers
                 new JavaScriptModuleExport(applicationBasePath + "/ClientApp/dist/main-server"),
                 unencodedAbsoluteUrl,
                 unencodedPathAndQuery,
-                transferData, // Our simplified Request object & any other CustommData you want to send!
+                transferData, // Our simplified Request object & any other CustomData you want to send!
                 30000,
                 Request.PathBase.ToString()
             );

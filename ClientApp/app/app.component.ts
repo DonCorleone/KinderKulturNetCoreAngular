@@ -1,5 +1,5 @@
 
-import {mergeMap, map, filter} from 'rxjs/operators';
+import { mergeMap, map, filter } from 'rxjs/operators';
 import { Component, OnInit, OnDestroy, Inject, ViewEncapsulation, RendererFactory2, PLATFORM_ID, Injector } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute, PRIMARY_OUTLET } from '@angular/router';
 import { Meta, Title, DOCUMENT, MetaDefinition } from '@angular/platform-browser';
@@ -70,7 +70,7 @@ export class AppComponent implements OnInit, OnDestroy {
                 return route;
             }),
             filter(route => route.outlet === 'primary'),
-            mergeMap(route => route.data),)
+            mergeMap(route => route.data))
             .subscribe((event) => {
                 this._setMetaAndLinks(event);
             });

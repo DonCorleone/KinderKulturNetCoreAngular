@@ -1,12 +1,12 @@
-using AspCoreServer.Data;
-using AspCoreServer.Models;
+using AspCoreServer.Server.Data;
+using AspCoreServer.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspCoreServer.Controllers
+namespace AspCoreServer.Server.Controllers
 {
   [Route("api/[controller]")]
   public class UsersController : Controller

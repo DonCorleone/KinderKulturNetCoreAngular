@@ -1,8 +1,8 @@
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using Asp2017.Server.Helpers;
-using Asp2017.Server.Models;
+using AspCoreServer.Server.Helpers;
+using AspCoreServer.Server.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.NodeServices;
 using Microsoft.AspNetCore.SpaServices.Prerendering;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspCoreServer.Controllers {
+namespace AspCoreServer.Server.Controllers {
   public class HomeController : Controller {
     protected readonly IHostingEnvironment HostingEnvironment;
     public HomeController (IHostingEnvironment hostingEnv) {
