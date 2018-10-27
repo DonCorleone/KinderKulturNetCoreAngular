@@ -21,6 +21,7 @@ export class UserService {
 
   getUsers() {
     return this.http.get<IUser[]>(`${this.baseUrl}/api/users`);
+   // return this.http.get<IUser[]>(`${this.baseUrl}/api/1.0/users`);
   }
 
   getUser(user: IUser) {

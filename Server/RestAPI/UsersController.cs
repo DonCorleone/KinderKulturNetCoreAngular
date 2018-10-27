@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace AspCoreServer.Server.Controllers
 {
-  [Route("api/[controller]")]
+  // [ApiVersion("1.0")]
+  // [Route("api/{version:apiVersion}/[controller]")]
   public class UsersController : Controller
   {
     private readonly SpaDbContext _context;
